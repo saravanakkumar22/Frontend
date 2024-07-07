@@ -9,10 +9,10 @@ export class StudentsRegisterService {
 
   constructor(private http:HttpClient) {
   }
-  apiGetUrl="http://localhost:4000/";
-  apiSetUrl="http://localhost:4000/post";
-  apiPutUrl="http://localhost:4000/user";
-  logValidateUrl="http://localhost:4000/login";
+  apiGetUrl="http://localhost:3000/";
+  apiSetUrl="http://localhost:3000/post";
+  apiPutUrl="http://localhost:3000/user";
+  logValidateUrl="http://localhost:3000/login";
 
   GetStudentDetails():Observable<any>{
     return this.http.get(`${this.apiGetUrl}`);
