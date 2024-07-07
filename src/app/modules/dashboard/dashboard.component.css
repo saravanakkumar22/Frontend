@@ -1,0 +1,64 @@
+
+#courseHeading{
+    text-align: center;
+    margin: 30px 0 0 0;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.card{
+    display: flex;
+    justify-content:space-around;
+    margin: 40px 20px;
+    width: 250px;
+    height: 90%;
+    box-shadow: 0 0 10px #1d1d1d;
+   
+    
+}
+mat-card-header h2 img{
+    width: 40px;
+    height: 40px;
+
+}
+
+mat-card-header h5{
+    cursor: pointer;
+    color: blue;
+    
+}
+
+mat-card-content{
+    height: 60%;
+}
+span{
+   
+   margin-left: 15%;
+   margin-top: -60px;
+   cursor: pointer;
+   color: rgb(72, 72, 247);
+}
+
+h1 img{
+    margin-top: 30px;
+    width: 150px;
+    height: 200px;
+}
+
+div textarea{
+    height:200px;
+    width: 600px;
+    margin-bottom: 10px;
+}
+#exerciseSuccess{
+    width: 600px;
+    margin-bottom: 100px;
+}
+#submitBtn{
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+ul a{
+    margin-top: 2%;
+}

@@ -1,0 +1,54 @@
+/* :host{
+   
+    } */
+    .mat-icon{
+        vertical-align: middle;
+        
+        }
+    #profile{
+        margin-top:20px;
+        cursor: pointer;
+        color: blue;
+    }
+        img{
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-icon{
+            margin-bottom: 5px;
+            margin-left: 15px;
+        }
+        .pages,
+        .tools{
+            padding-left: 20px;
+        /* margin-left: 10px; */
+        margin-bottom: 10px;
+        }
+    
+       /* sidenav button color change */
+       a.active{
+        background-color: rgb(39, 138, 39);
+       }
+        #icons{
+            margin-bottom: 5px;
+        }
+        span{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+       #heading{
+        margin-left: 10px;
+        font-size: 25px;
+        margin-top: 10px;
+        
+       }
+    
+    #profile-details{
+        text-align: center;
+        display: flex;
+    }
+    
+    
+    

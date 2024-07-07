@@ -1,0 +1,60 @@
+<nav id="navbar">
+    <div id="navContent">
+        <h1 id="pageTitle">DOUTE DISCUSSION GROUP CHAT</h1>
+    </div>
+</nav>
+<div id="body">
+
+    
+        <div class="row" *ngFor="let getOldMessage of getOldMessages">
+            <!-- other and you send old Messages -->
+
+            <div id="oldMessageYou"  *ngIf=" details.userName.Name === getOldMessage.userName">
+                <ul>
+                    <li id="userName"><p style="color: rgb(26, 29, 223);">{{getOldMessage.userName}}</p></li>
+                    <li><p>{{getOldMessage.message}}</p></li>
+                    <li><p id="time">{{getOldMessage.sendTime}}</p></li>
+                </ul>
+            </div>
+
+            <div id="oldMessageOther" *ngIf="details.userName.Name !== getOldMessage.userName">
+                <ul>
+                    <li id="userName"> <p style="color: rgb(26, 29, 223);">{{getOldMessage.userName}}</p></li>
+                    <li><p>{{getOldMessage.message}}</p></li>
+                    <li><p id="time">{{getOldMessage.sendTime}}</p></li>
+                </ul>
+            </div>
+        </div>
+   
+    <!-- new you send messages -->
+   
+    <div class="row" *ngFor="let  getSendMessage of getSendMessages">
+        <div id="sendMessage"  *ngIf="getSendMessage.userName === details.userName.Name">
+            <ul>
+                <li><p style="color: rgb(26, 29, 223);">{{getSendMessage.userName}}</p></li>
+                <li><p>{{getSendMessage.message}}</p></li>
+                <li><p id="time">{{getSendMessage.sendTime}}</p></li>
+            </ul>
+        </div>
+        
+        <!-- socket.io recived messages -->
+        <div id="reciveMessage" *ngIf="getSendMessage.userName !== details.userName.Name">
+
+            <ul>
+                <li> <p style="color: rgb(26, 29, 223);">{{getSendMessage.userName}}</p></li>
+                <li><p>{{getSendMessage.message}}</p></li>
+                <li><p id="time">{{getSendMessage.sendTime}}</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <form #message="ngForm">
+        <div id="messageBox">
+            <textarea required name="message" [(ngModel)]="details.message" id="" cols="30" rows="10"></textarea>
+            <button [disabled]="message.invalid" (click)="sendMessage()">send</button>
+        </div>
+    </form>
+
+
+</div>
+

@@ -1,0 +1,42 @@
+
+<div id="body">
+    <div id="outer">
+        <span class="bg-animate"></span>
+        <div *ngFor="let details of studentDetails"></div>
+
+        <div id="inner" class="row">
+            <div id="logBack">
+                <form #login="ngForm" (submit)="checkLoginData(login.value)">
+                    <h1 id="heading"><u>Login</u></h1>
+                    <div class="input-out">
+                        <label *ngIf="Email.invalid && Email.touched" class="errormessage">&nbsp;please enter valid
+                            Email Id Formate</label>
+                        <label *ngIf="emailIdInvalid" class="errormessage">&nbsp;please Enter valid Email Id</label>
+                        <input required pattern="[a-zA-Z0-9]+@+[a-zA-Z]+\.+[a-zA-Z]{2,3}" type="text" class="input-in"
+                            id="Email" #Email="ngModel" name="Email" [(ngModel)]="loginData.Email">
+                        <label id="placeholder">&nbsp;Email Id</label>
+                        <i id="placeholdericon" class="bx bxs-lock"></i>
+                    </div>
+
+                    <div class="input-out">
+                        <label *ngIf="Password.invalid && Password.touched" class="errormessage">&nbsp;please enter
+                            valid password Formate</label>
+                        <label *ngIf="passwordInvalid" class="errormessage">&nbsp;please enter valid password</label>
+                        <input required pattern="^[a-zA-z0-9]+$" type="text" class="input-in" id="password"
+                            #Password="ngModel" name="Password" [(ngModel)]="loginData.Password">
+                        <label id="placeholder">&nbsp;Password</label>
+                        <i id="placeholdericon" class="bx bxs-lock"></i>
+                    </div>
+                    <button type="submit" [disabled]="login.invalid" class="btn btn-primary">Login</button>
+                    <div><a href="#" id="forget"> <b>&nbsp;Forget Password?</b></a></div>
+                </form>
+            </div>
+            <div id="col2" class="col">
+                <div class="info-text">
+                    <h1>WELCOME BACK!</h1>
+                    <h2 id="cal2heading">PROGRAMING COURSE EDUCATION</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

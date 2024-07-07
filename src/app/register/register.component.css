@@ -1,0 +1,153 @@
+#body{
+    background-color: #020410;
+    height: 100vh;
+}
+#outer{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    /* transform: translate(-75%, -75%); */
+    width: 60%;
+   
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #12f7ff;
+    border: 2px solid #0ef;
+    overflow: hidden;
+}
+
+#outer .bg-animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150%;
+    height: 160%;
+    /* margin-right: 150px; */
+    /* border-bottom: 3px solid #0ef; */
+    background:linear-gradient(35deg, #081b29, #0ef);
+    transform: rotate(15deg) skewY(35deg);
+    transform-origin: bottom right;
+    overflow: hidden;
+}
+
+#regBack{
+    
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+   height: 520px;
+   width: 85%;
+
+}
+form{
+    margin-top: 10%;
+}
+
+#heading{
+    font-size:30px ;
+    margin-left: 30%;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 900;
+    color: #e4e4e4;
+}
+.input-out{
+    margin: 30px 50px;
+    width: 70%;
+    border-bottom: 2px solid #e4e4e4;
+    transition: 1s ease;
+
+}
+
+.input-out label{
+    font-weight: 700;
+    position: absolute;
+    /* margin-top: 5px; */
+    left: 0;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label{
+    margin-top: -10px;
+}
+
+input:focus~#placeholder,
+input:valid~#placeholder{
+    margin-top: -10px;
+}
+.input-in{
+    color: white;
+}
+#placeholder{
+    font-size: 20px;
+    color: #12f7ff;
+    margin-left: 50px;
+    
+}
+#placeholdericon{
+    font-size: 20px;
+    color: #12f7ff;
+}
+
+input{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+i{
+    position: absolute;
+   margin-left: -10px;
+}
+
+.btn{
+    margin-bottom: 10px;
+    padding: 9px 40px;
+    /* margin-bottom: 30px; */
+    margin-left: 30%;
+    color: black;
+    font-weight: 700;
+}
+div #login{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 25%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.errormessage{
+    color: red;
+    position: relative;
+    margin-left: 30%;
+}
+i{
+    float: right;
+    margin: bottom 20px; ;
+}
+
+#col2{
+    position: relative;
+     border-start-end-radius: 20px;
+     border-bottom-right-radius: 20px;
+    height: 520px;
+}
+
+.row .info-text h1{
+    text-align: center;
+    margin: 30% 0 40px;
+    font-size: 40px;
+    color: white;
+}
+.row .info-text h2{
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+    margin-left: 30%;
+    color: white;
+}
+

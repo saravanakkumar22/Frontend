@@ -1,0 +1,60 @@
+
+<div id="body">
+    <div id="outer">
+        <span class="bg-animate"></span>
+        <div class="row">
+            
+                <div class="col" id="regBack">
+
+                    <form #register="ngForm" (submit)="postFormData(register.value)">
+                        <h1 id="heading"><u>Register Now</u></h1>
+
+                        <div class="input-out">
+                            <input required type="text" pattern="^[a-zA-z]+$" class="input-in" autocomplete="off"
+                            id="stdName" name="Name" #Name="ngModel" ngModel>
+                            <label *ngIf="Name.invalid && Name.touched" class="errormessage">&nbsp; Please Enter Valid
+                                Data</label>
+                                <label id="placeholder">&nbsp; Full Name</label>
+                            <i id="placeholdericon" class="bx bxs-user"></i>
+                        </div>
+
+                        <div class="input-out">
+                            <label *ngIf="Mobile.invalid && Mobile.touched" class="errormessage">&nbsp; Please Enter
+                                Valid Data</label>
+                            <input required type="text" minlength="10" maxlength="10" pattern="^[0-9]+$"
+                                class="input-in" id="Mobile" name="Mobile" #Mobile="ngModel" ngModel>
+                                <label id="placeholder">&nbsp; Mobile</label>
+                            <i id="placeholdericon" class="bx bx-mobile"></i>
+                        </div>
+
+                        <div class="input-out">
+                            <label *ngIf="Email.invalid && Email.touched" class="errormessage">&nbsp; Please Enter Valid
+                                Data</label>
+                            <input required type="text" pattern="^[a-zA-Z0-9]+@+[gmail]+.+[a-zA-Z]+$" class="input-in"
+                                id="email" name="Email" #Email="ngModel" ngModel>
+                                <label id="placeholder">&nbsp; Email Id</label>
+                            <i id="placeholdericon" class="bx bx-envelope"></i>
+                        </div>
+
+                        <div class="input-out">
+                            <label *ngIf="Password.invalid && Password.touched" class="errormessage">&nbsp; Please Enter
+                                Valid Data</label>
+                            <input required type="password" pattern="^[a-zA-z0-9]+$" class="input-in" id="password"
+                                name="Password" #Password="ngModel" ngModel>
+                                <label id="placeholder">&nbsp; Password</label>
+                            <i id="placeholdericon" class="bx bxs-lock"></i>
+                        </div>
+
+                        <button type="submit" [disabled]="register.invalid" class="btn btn-primary">Register</button>
+                        <div><a href="login" id="login" (click)="redirectToLogin()"> do you want to<b>&nbsp;Login?</b></a></div>
+                    </form>
+                </div>
+                <div id="col2" class="col">
+                    <div class="info-text">
+                        <h1>WELCOME TO</h1>
+                        <h2 id="cal2heading">PROGRAMING COURSE EDUCATION</h2>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

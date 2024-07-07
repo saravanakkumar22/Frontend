@@ -1,0 +1,132 @@
+/* :host{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+} */
+.heading{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    height: 80%;
+    margin: 40px 20px;
+    box-shadow: 0 0 10px #1d1d1d;
+}
+
+mat-card-header img{
+    margin-left: 10%;
+    width:140px;
+    height: 140px;
+}
+
+#exercisecontentpage1{
+    text-align: center;
+}
+
+#card-footer-page1{
+    margin: 20px 33%;
+}
+
+/* page2  sidebar */ 
+
+
+mat-drawer-container{
+    height: 100vh;
+    
+}
+mat-drawer{
+    background-color:rgb(145, 143, 143);
+    
+}
+#exitButton{
+    float: right;
+    
+}
+#exitIcon{
+    transform: rotate(180deg);
+}
+
+#headButton{
+    margin-top: 3px;    
+}
+
+#headButton span{
+    font-size: 20px;
+}
+
+#headButton span{
+    color: white;
+}
+
+/* exercises page */
+
+mat-drawer-content div h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#exercisecard{
+    width: 100%;
+    
+}
+
+#exerciseheading{
+    margin-left: 15%;
+    font-size: 30px;
+}
+
+/* answer show correct or notcorrect----------------------- */
+
+#correct,
+#notCorrect{
+    height: 400px;
+}
+
+ h3{
+    font-size: 40px;
+    margin:10% 0 0 10%;
+}
+
+/* basic html exercise1 */
+#exercisecontentpage2{
+    margin:3% 0 0 5%;
+    
+}
+mat-card-content span{
+    font-size: 20px;
+}
+#basicinput1{
+    width: 20px;
+    font-size: 20px;
+}
+#card-footer-page2{
+    margin-top: 10%;
+    margin-bottom: 20px;
+}
+
+#exercisesubmit{
+    margin-left: 4%;
+}
+
+#showanswer{
+    margin-left: 30%;
+}
+
+
+
+
+
+
+
+

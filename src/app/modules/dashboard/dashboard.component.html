@@ -1,0 +1,88 @@
+<div id="courseDetails" class="row">
+    <h1 id="courseHeading" [ngStyle]="{display:maincard?'none':'block'}">JAVA FULL STACK DEVELOPMENT</h1>
+    <div class="col" id="outer" *ngFor=" let courseDetail of courseDetails">
+        <mat-card class="card" [ngStyle]="{display:maincard?'none':'block'}">
+            <mat-card-header>
+                <h2><img src={{courseDetail.image}}>&nbsp;{{courseDetail.header}}</h2>
+            </mat-card-header>
+            <mat-card-content>{{courseDetail.content}}</mat-card-content>
+            <mat-card-footer>
+                <mat-card-header (click)="showFullDetails(courseDetail.id)">
+                    <h5>{{courseDetail.footheader}}</h5>
+                </mat-card-header>
+                <!-- <mat-card-content >{{courseDetail.footer}}</mat-card-content> -->
+            </mat-card-footer>
+        </mat-card>
+
+    </div>
+
+
+    <div *ngFor="let language of programingLanguage">
+        <div *ngIf="language.id ===languageId">
+            <div [ngStyle]="{display:maincard?'block':'none'}">
+                <h1><img src="{{language.image}}"> </h1>
+                <h2><span (click)="showFullDetails(language.id)">hide full details</span></h2>
+
+                <h1>{{language.introheader}}</h1>
+                <h3>
+                    <p>{{language.introduction}}</p>
+                    <hr>
+                    <h2>Features:</h2>
+                    <ul>
+                        <li *ngIf="language.feature1 !==null ">{{language.feature1}}</li>
+                        <li *ngIf="language.feature2 !==null ">{{language.feature2}}</li>
+                        <li *ngIf="language.feature3 !==null ">{{language.feature3}}</li>
+                        <li *ngIf="language.feature4 !==null ">{{language.feature4}}</li>
+                        <li *ngIf="language.feature5 !==null ">{{language.feature5}}</li>
+                        <li *ngIf="language.feature6 !==null ">{{language.feature6}}</li>
+                        <li *ngIf="language.feature7 !==null ">{{language.feature7}}</li>
+                        <li *ngIf="language.feature8 !==null ">{{language.feature8}}</li>
+                        <li *ngIf="language.feature9 !==null ">{{language.feature9}}</li>
+                        <li *ngIf="language.feature10 !==null ">{{language.feature10}}</li>
+                        <li *ngIf="language.feature11 !==null ">{{language.feature11}}</li>
+                        <div *ngIf="language.id === languageId">
+                        <button  class="btn btn-success"  [ngStyle]="{display:exerciseBtn? 'none':'block'}" (click)="exerciseClick(language.id)" >Exercises</button>
+                        <div *ngFor="let subValue of exSubValue">
+                            <div *ngIf="language.id === subValue">
+                                <button  class="btn btn-success"  [ngStyle]="{display:exerciseBtn? 'block':'none'}">Exercises completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </h3>
+            </div>
+            <!-- exercies page -->
+            <div [ngStyle]="{display:maincard?'block':'none'}" >
+                <div  [ngStyle]="{display:textareaShowHide?'none':'block'}">
+                    <div *ngIf="language.id ===languageId" >
+                       <form #exercise="ngForm" (submit)="answerSubmit(language.id, exercise.value)">
+                        <div>
+                            <textarea  id="" cols="30" rows="10"  name="exercisedata" #exercisedata="ngModel" ngModel> </textarea>
+                        </div>
+                        <button class="btn btn-success" id="submitBtn" >Submit Answer</button>
+                       </form>
+                    </div>
+                </div>
+                <div [ngStyle]="{display:cardShowHide?'none':'block'}">
+
+                   <div *ngFor="let subValue of exSubValue">
+                    <mat-card id="exerciseSuccess"  *ngIf="language.id === subValue">
+                        <mat-card-header>
+                            <h1> SUCCESS !</h1>
+                        </mat-card-header>
+                        <mat-card-content *ngFor="let exerciseData of getExerciseData">
+                            {{exerciseData.exercisedata}}
+                        </mat-card-content>
+                    </mat-card>
+                   </div>
+                </div>
+            </div>
+
+           
+            
+            
+           
+    </div>
+
+    <div>
+    </div>

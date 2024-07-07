@@ -1,0 +1,26 @@
+
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2 id="profile" (click)="hideShow()"><mat-icon class="profile-icon">perm_identity</mat-icon> Profile</h2>
+            
+        </div>
+        <div id="profile-details" [ngStyle]="{display:profile?'block':'none'}">
+            <img   mat-list-item src="https://www.pngitem.com/pimgs/m/581-5813504_avatar-dummy-png-transparent-png.png" alt="">
+        <h2  mat-list-item>{{logDataDetails.Name}}</h2>
+        <h4   mat-list-item>{{logDataDetails.Email}}</h4>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 id="heading"><span >pages</span></h2>
+    <a class="pages" (click)="sideNavButtonColorchange(1)" mat-list-item routerLinkActive="list-item-active" [ngClass]="{'active': activeButton==1}" routerLink="dashboard"><mat-icon id="icons">dashboard</mat-icon> <span>DashBoard</span></a>
+    <a class="pages" (click)="sideNavButtonColorchange(2)" mat-list-item routerLinkActive="list-item-active" [ngClass]="{'active': activeButton==2}" routerLink="groupchat"><mat-icon id="icons">picture_in_picture</mat-icon><span>ChatBot</span></a>
+    <mat-divider></mat-divider>
+    
+    <h2 id="heading"><span >Tools</span></h2>
+    <a class="tools" (click)="sideNavButtonColorchange(3)" mat-list-item routerLinkActive="list-item-active" [ngClass]="{'active': activeButton==3}" routerLink="/articals">
+        <mat-icon id="icons">import_contacts</mat-icon><span>contacts</span>  </a>
+    <a class="tools" (click)="sideNavButtonColorchange(4)" mat-list-item routerLinkActive="list-item-active" [ngClass]="{'active': activeButton==4}" routerLink="/articals">
+        <mat-icon id="icons">contact_phone</mat-icon> <span>Leads</span> </a>
+</mat-nav-list>
+
