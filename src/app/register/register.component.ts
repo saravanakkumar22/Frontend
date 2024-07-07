@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     });
   }
   redirectToLogin() {
-    this.router.navigate(["login"]);
+    this.router.navigate(["/login"]);
   }
 
   delete(id: any) {
