@@ -11,9 +11,9 @@ import { DefaultComponent } from './layouts/default/default.component';
 
 
 const routes: Routes = [
-  {path:"reg", component:RegisterComponent},
+  {path:"", component:RegisterComponent},
   {path:"login", component:LoginComponent},
-  {path:"", component:DefaultComponent,
+  {path:"home", component:DefaultComponent,
   children:[
     {path:"dashboard", component:DashboardComponent},
     {path:"groupchat", component:GroupchatComponent}
