@@ -28,7 +28,7 @@
                         <i id="placeholdericon" class="bx bxs-lock"></i>
                     </div>
                     <button type="submit" [disabled]="login.invalid" class="btn btn-primary">Login</button>
-                    <div><a href="#" id="forget"> <b>&nbsp;Forget Password?</b></a></div>
+                    <div><a  id="forget" (click)="redirectToDashBoard()"> <b>&nbsp;Forget Password?</b></a></div>
                 </form>
             </div>
             <div id="col2" class="col">
