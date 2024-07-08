@@ -9,10 +9,10 @@ export class StudentsRegisterService {
 
   constructor(private http:HttpClient) {
   }
-  apiGetUrl="http://localhost:3000/";
-  apiSetUrl="http://localhost:3000/post";
-  apiPutUrl="http://localhost:3000/user";
-  logValidateUrl="http://localhost:3000/login";
+  apiGetUrl="https://program-learning-platform-backend.onrender.com/";
+  apiSetUrl="https://program-learning-platform-backend.onrender.com/post";
+  apiPutUrl="https://program-learning-platform-backend.onrender.com/user";
+  logValidateUrl="https://program-learning-platform-backend.onrender.com/login";
 
   GetStudentDetails():Observable<any>{
     return this.http.get(`${this.apiGetUrl}`);
